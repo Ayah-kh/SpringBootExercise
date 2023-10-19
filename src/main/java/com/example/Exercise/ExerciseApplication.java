@@ -2,6 +2,7 @@ package com.example.Exercise;
 
 import com.example.Exercise.controller.MyController;
 import com.example.Exercise.controller.PizzaController;
+import com.example.Exercise.lazy.LazyLoader;
 import com.example.Exercise.repositroy.MyRepo;
 import com.example.Exercise.srevice.MyService;
 import com.example.Exercise.srevice.VegPizza;
@@ -30,6 +31,9 @@ public class ExerciseApplication {
 
 		MyRepo myRepo = context.getBean(MyRepo.class);
 		System.out.println("myRepo.hello() = " + myRepo.hello());
+
+		LazyLoader lazyLoader = context.getBean(LazyLoader.class);
+
 	}
 
 }
