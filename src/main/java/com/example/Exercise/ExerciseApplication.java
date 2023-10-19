@@ -1,6 +1,8 @@
 package com.example.Exercise;
 
+import com.example.Exercise.controller.MyController;
 import com.example.Exercise.controller.PizzaController;
+import com.example.Exercise.srevice.MyService;
 import com.example.Exercise.srevice.VegPizza;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -15,6 +17,15 @@ public class ExerciseApplication {
 				= SpringApplication.run(ExerciseApplication.class, args);
 //		VegPizza vegPizza = (VegPizza) context.getBean("VegPizzaBean");
 //		System.out.println("vegPizza.getPizza() = " + vegPizza.getPizza());
+
+//		PizzaController pizzaController= context.getBean(PizzaController.class);
+//		System.out.println("pizzaController.getPizza() = " + pizzaController.getPizza());
+
+		MyController myController = context.getBean(MyController.class);
+		System.out.println("myController.sayHello() = " + myController.sayHello());
+
+		MyService myService = context.getBean(MyService.class);
+		System.out.println("myService.hello() = " + myService.hello());
 	}
 
 }
