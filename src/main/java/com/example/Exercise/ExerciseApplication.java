@@ -4,6 +4,8 @@ import com.example.Exercise.controller.MyController;
 import com.example.Exercise.controller.PizzaController;
 import com.example.Exercise.lazy.LazyLoader;
 import com.example.Exercise.repositroy.MyRepo;
+import com.example.Exercise.scope.PrototypeBean;
+import com.example.Exercise.scope.SingletonBean;
 import com.example.Exercise.srevice.MyService;
 import com.example.Exercise.srevice.VegPizza;
 import org.springframework.boot.SpringApplication;
@@ -23,16 +25,23 @@ public class ExerciseApplication {
 //		PizzaController pizzaController= context.getBean(PizzaController.class);
 //		System.out.println("pizzaController.getPizza() = " + pizzaController.getPizza());
 
-		MyController myController = context.getBean(MyController.class);
-		System.out.println("myController.sayHello() = " + myController.sayHello());
+//		MyController myController = context.getBean(MyController.class);
+//		System.out.println("myController.sayHello() = " + myController.sayHello());
+//
+//		MyService myService = context.getBean(MyService.class);
+//		System.out.println("myService.hello() = " + myService.hello());
+//
+//		MyRepo myRepo = context.getBean(MyRepo.class);
+//		System.out.println("myRepo.hello() = " + myRepo.hello());
+//
+//		LazyLoader lazyLoader = context.getBean(LazyLoader.class);
 
-		MyService myService = context.getBean(MyService.class);
-		System.out.println("myService.hello() = " + myService.hello());
-
-		MyRepo myRepo = context.getBean(MyRepo.class);
-		System.out.println("myRepo.hello() = " + myRepo.hello());
-
-		LazyLoader lazyLoader = context.getBean(LazyLoader.class);
+		SingletonBean singletonBean = context.getBean(SingletonBean.class);
+		SingletonBean singletonBean1 = context.getBean(SingletonBean.class);
+		SingletonBean singletonBean2 = context.getBean(SingletonBean.class);
+		PrototypeBean prototypeBean1 = context.getBean(PrototypeBean.class);
+		PrototypeBean prototypeBean2 = context.getBean(PrototypeBean.class);
+		PrototypeBean prototypeBean3 = context.getBean(PrototypeBean.class);
 
 	}
 
