@@ -8,6 +8,7 @@ import com.example.Exercise.scope.PrototypeBean;
 import com.example.Exercise.scope.SingletonBean;
 import com.example.Exercise.srevice.MyService;
 import com.example.Exercise.srevice.VegPizza;
+import com.example.Exercise.value.ValueAnnotation;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -36,13 +37,18 @@ public class ExerciseApplication {
 //
 //		LazyLoader lazyLoader = context.getBean(LazyLoader.class);
 
-		SingletonBean singletonBean = context.getBean(SingletonBean.class);
-		SingletonBean singletonBean1 = context.getBean(SingletonBean.class);
-		SingletonBean singletonBean2 = context.getBean(SingletonBean.class);
-		PrototypeBean prototypeBean1 = context.getBean(PrototypeBean.class);
-		PrototypeBean prototypeBean2 = context.getBean(PrototypeBean.class);
-		PrototypeBean prototypeBean3 = context.getBean(PrototypeBean.class);
+//		SingletonBean singletonBean = context.getBean(SingletonBean.class);
+//		SingletonBean singletonBean1 = context.getBean(SingletonBean.class);
+//		SingletonBean singletonBean2 = context.getBean(SingletonBean.class);
+//		PrototypeBean prototypeBean1 = context.getBean(PrototypeBean.class);
+//		PrototypeBean prototypeBean2 = context.getBean(PrototypeBean.class);
+//		PrototypeBean prototypeBean3 = context.getBean(PrototypeBean.class);
 
+		ValueAnnotation valueAnnotation = context.getBean(ValueAnnotation.class);
+		System.out.println("valueAnnotation.getDefaultName() = " + valueAnnotation.getDefaultName());
+		System.out.println("valueAnnotation.getHost() = " + valueAnnotation.getHost());
+		System.out.println("valueAnnotation.getEmail() = " + valueAnnotation.getEmail());
+		System.out.println("valueAnnotation.getPassword() = " + valueAnnotation.getPassword());
 	}
 
 }
