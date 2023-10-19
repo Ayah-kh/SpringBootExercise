@@ -13,8 +13,8 @@ public class ExerciseApplication {
     public static void main(String[] args) {
 		ConfigurableApplicationContext context
 				= SpringApplication.run(ExerciseApplication.class, args);
-		VegPizza vegPizza = context.getBean(VegPizza.class);
-		System.out.println("vegPizza.getPizza() = " + vegPizza.getPizza());
+//		VegPizza vegPizza = (VegPizza) context.getBean("VegPizzaBean");
+//		System.out.println("vegPizza.getPizza() = " + vegPizza.getPizza());
 	}
 
 }
