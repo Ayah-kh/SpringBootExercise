@@ -11,7 +11,6 @@ public class PizzaController {
 
     private Pizza pizza;
 
-    @Autowired
     public PizzaController(Pizza pizza) {
         this.pizza = pizza;
     }
