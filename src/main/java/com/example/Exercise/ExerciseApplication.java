@@ -2,6 +2,7 @@ package com.example.Exercise;
 
 import com.example.Exercise.controller.MyController;
 import com.example.Exercise.controller.PizzaController;
+import com.example.Exercise.repositroy.MyRepo;
 import com.example.Exercise.srevice.MyService;
 import com.example.Exercise.srevice.VegPizza;
 import org.springframework.boot.SpringApplication;
@@ -26,6 +27,9 @@ public class ExerciseApplication {
 
 		MyService myService = context.getBean(MyService.class);
 		System.out.println("myService.hello() = " + myService.hello());
+
+		MyRepo myRepo = context.getBean(MyRepo.class);
+		System.out.println("myRepo.hello() = " + myRepo.hello());
 	}
 
 }
