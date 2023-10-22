@@ -25,13 +25,13 @@ public class PizzaController {
         return pizza.getPizza();
     }
 
-    public void init(){
-        System.out.println("Initialization Logic");
-    }
+////    public void init(){
+//        System.out.println("Initialization Logic");
+//    }
 
-    public void destroy(){
-        System.out.println("Destruction Logic");
-    }
+//    public void destroy(){
+//        System.out.println("Destruction Logic");
+//    }
 
 
 }
