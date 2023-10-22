@@ -5,10 +5,22 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class PropertySourceDemo {
-    @Value("${gmail.host}")
+    @Value("${mail2.host}")
     private String host;
-    @Value("${gmail.email}")
+    @Value("${mail2.email}")
     private String email;
-    @Value("${gmail.password}")
+    @Value("${mail2.password}")
     private String password;
+
+    public String getHost() {
+        return host;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
 }

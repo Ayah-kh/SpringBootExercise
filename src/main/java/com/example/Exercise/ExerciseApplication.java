@@ -3,6 +3,7 @@ package com.example.Exercise;
 import com.example.Exercise.controller.MyController;
 import com.example.Exercise.controller.PizzaController;
 import com.example.Exercise.lazy.LazyLoader;
+import com.example.Exercise.properitySource.PropertySourceDemo;
 import com.example.Exercise.repositroy.MyRepo;
 import com.example.Exercise.scope.PrototypeBean;
 import com.example.Exercise.scope.SingletonBean;
@@ -44,11 +45,17 @@ public class ExerciseApplication {
 //		PrototypeBean prototypeBean2 = context.getBean(PrototypeBean.class);
 //		PrototypeBean prototypeBean3 = context.getBean(PrototypeBean.class);
 
-		ValueAnnotation valueAnnotation = context.getBean(ValueAnnotation.class);
-		System.out.println("valueAnnotation.getDefaultName() = " + valueAnnotation.getDefaultName());
-		System.out.println("valueAnnotation.getHost() = " + valueAnnotation.getHost());
-		System.out.println("valueAnnotation.getEmail() = " + valueAnnotation.getEmail());
-		System.out.println("valueAnnotation.getPassword() = " + valueAnnotation.getPassword());
+//		ValueAnnotation valueAnnotation = context.getBean(ValueAnnotation.class);
+//		System.out.println("valueAnnotation.getDefaultName() = " + valueAnnotation.getDefaultName());
+//		System.out.println("valueAnnotation.getHost() = " + valueAnnotation.getHost());
+//		System.out.println("valueAnnotation.getEmail() = " + valueAnnotation.getEmail());
+//		System.out.println("valueAnnotation.getPassword() = " + valueAnnotation.getPassword());
+
+		PropertySourceDemo propertySourceDemo=context.getBean(PropertySourceDemo.class);
+		System.out.println("propertySourceDemo.getHost() = " + propertySourceDemo.getHost());
+		System.out.println("propertySourceDemo.getEmail() = " + propertySourceDemo.getEmail());
+		System.out.println("propertySourceDemo.getPassword() = " + propertySourceDemo.getPassword());
+
 	}
 
 }
