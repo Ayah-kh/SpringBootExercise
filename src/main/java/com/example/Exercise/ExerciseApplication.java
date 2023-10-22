@@ -55,6 +55,8 @@ public class ExerciseApplication {
 		System.out.println("propertySourceDemo.getHost() = " + propertySourceDemo.getHost());
 		System.out.println("propertySourceDemo.getEmail() = " + propertySourceDemo.getEmail());
 		System.out.println("propertySourceDemo.getPassword() = " + propertySourceDemo.getPassword());
+		System.out.println("propertySourceDemo.getAppName() = " + propertySourceDemo.getAppName());
+		System.out.println("propertySourceDemo.getAppDescription() = " + propertySourceDemo.getAppDescription());
 
 	}
 
